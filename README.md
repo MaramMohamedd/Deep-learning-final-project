@@ -21,6 +21,7 @@ The goal is to understand **when and why** different architectures (RNN, LSTM, G
 | Sentiment Analysis | **RNN + Attention** | Attention significantly improved long text understanding |
 
 ## 📂 Repository Structure
+```
 deep-learning-final-project/
 ├── climate_forecasting/ # Jena temperature prediction
 │ └── notebooks/ # 5 model implementations
@@ -44,7 +45,7 @@ deep-learning-final-project/
 │
 └── README.md
 └── LICENSE
-
+```
 
 ## 📊 Experiments & Results
 
