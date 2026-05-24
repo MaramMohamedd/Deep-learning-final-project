@@ -1,0 +1,22 @@
+# Core Deep Learning Frameworks
+tensorflow>=2.0.0
+torch>=1.9.0
+
+# Hugging Face Ecosystem (Transformers, Trainer, Tokenizers)
+transformers>=4.20.0
+tokenizers>=0.12.0
+
+# Time Series Forecasting (TFT - Temporal Fusion Transformer)
+pytorch-forecasting>=0.10.0
+pytorch-lightning>=1.6.0
+
+# Data Processing & Numerical Operations
+pandas>=1.3.0
+numpy>=1.21.0
+
+# Visualization
+matplotlib>=3.4.0
+seaborn>=0.11.0
+
+# Machine Learning Utilities
+scikit-learn>=1.0.0
