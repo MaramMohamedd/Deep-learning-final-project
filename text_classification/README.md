@@ -1,6 +1,4 @@
-Here's a **clean, simple README.md** specifically for your **Text Classification** experiment:
 
-```markdown
 # Text Sentiment Analysis: RNN + Attention Mechanism
 
 ## 📌 Project Overview
