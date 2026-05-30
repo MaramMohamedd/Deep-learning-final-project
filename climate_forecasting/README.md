@@ -82,10 +82,7 @@ Dense(1)
 - Tests if simple recurrent connections can capture weather patterns
 - Much faster training than LSTM/GRU
 
-**Key insight from documentation:** 
 > *"SimpleRNN works well for short-term patterns but suffers from vanishing gradients - cannot learn dependencies beyond ~20 timesteps"*
-
-**Expected performance:** Moderate (MAE ~2.1°C)
 
 ---
 
@@ -103,10 +100,7 @@ Dense(1)
 - Three gates (forget, input, output) control information flow
 - Can learn dependencies of **100+ timesteps**
 
-**From your documentation:**
 > *"LSTM is theoretically ideal for climate data because weather patterns have both short-term (daily cycles) and long-term (seasonal) dependencies"*
-
-**Expected performance:** Best (MAE ~1.48°C)
 
 ---
 
@@ -124,10 +118,8 @@ Dense(1)
 - **Faster training** with similar performance to LSTM
 - Fewer parameters → less overfitting risk
 
-**From your documentation:**
 > *"GRU achieved comparable results to LSTM but trained 15-20% faster. For production systems, GRU might be preferred over LSTM"*
 
-**Expected performance:** Comparable to LSTM (MAE ~1.51°C)
 
 ---
 
@@ -145,10 +137,7 @@ Dense(1)
 - Helps model focus on critical weather events (e.g., sudden pressure drops)
 - Provides **interpretability** (can visualize which past timesteps matter most)
 
-**From your documentation:**
 > *"Counterintuitively, attention did NOT significantly improve performance for this task. Likely because temperature follows smooth, continuous patterns rather than sudden important events"*
-
-**Expected performance:** Slightly worse than LSTM (MAE ~1.52°C)
 
 ---
 
@@ -156,7 +145,6 @@ Dense(1)
 
 **Architecture:**
 ```python
-# Custom architecture from your notebook
 TransformerEncoder(num_heads=4, key_dim=32)
 GlobalAveragePooling1D()
 Dense(32, activation='relu')
@@ -168,10 +156,7 @@ Dense(1)
 - Parallel processing (unlike RNNs that process sequentially)
 - State-of-the-art for many sequence tasks
 
-**From your documentation:**
 > *"Transformer underperformed compared to LSTM on this small dataset (420k samples is relatively small for transformer). Requires more data or pretraining to shine"*
-
-**Expected performance:** Moderate (MAE ~1.67°C)
 
 ---
 
@@ -187,9 +172,6 @@ Dense(1)
 | Attention RNN | 1.52 | 2.08 | 52,234 | 31 sec |
 | Transformer | 1.67 | 2.23 | 85,432 | 42 sec |
 
-### Training Curves
-![Training Loss Comparison]
-*(Add your loss curves figure here)*
 
 ---
 
@@ -221,13 +203,11 @@ Time: 2016-01-01 00:00 → Actual: 2.3°C, Predicted: 2.5°C
 Time: 2016-01-01 06:00 → Actual: 1.8°C, Predicted: 1.6°C
 Time: 2016-01-01 12:00 → Actual: 4.2°C, Predicted: 4.5°C
 ```
-*(Add your actual plot here)*
 
 ### Error Distribution
 - **LSTM**: 68% of predictions within ±1.5°C
 - **SimpleRNN**: Only 45% within ±1.5°C
 - **Worst errors**: During sudden temperature changes (cold fronts)
-
 ---
 
 ## 🛠️ How to Run
