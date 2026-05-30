@@ -76,7 +76,7 @@ model = Sequential([
 3. **Interpretable** - can visualize which words influenced the decision
 4. **Better than simple RNN** because not all words contribute equally to sentiment
 
-**Example from your documentation:**
+**Example from our documentation:**
 > *"In 'The movie was terrible but acting was brilliant', attention helps focus on 'brilliant' (positive) and 'terrible' (negative) rather than averaging across all words"*
 
 ---
